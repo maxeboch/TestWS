@@ -56,10 +56,12 @@
 /home/max/TestWS/build/agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 /home/max/TestWS/build/agitr/CMakeFiles/roscpp_generate_messages_py.dir
 /home/max/TestWS/build/agitr/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/max/TestWS/build/agitr/CMakeFiles/install.dir
+/home/max/TestWS/build/agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/max/TestWS/build/agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir
 /home/max/TestWS/build/agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/max/TestWS/build/agitr/CMakeFiles/turtlesim_generate_messages_nodejs.dir
 /home/max/TestWS/build/agitr/CMakeFiles/count.dir
-/home/max/TestWS/build/agitr/CMakeFiles/install/strip.dir
 /home/max/TestWS/build/agitr/CMakeFiles/turtlesim_generate_messages_py.dir
 /home/max/TestWS/build/agitr/CMakeFiles/std_srvs_generate_messages_nodejs.dir
 /home/max/TestWS/build/agitr/CMakeFiles/geometry_msgs_generate_messages_eus.dir
@@ -71,7 +73,6 @@
 /home/max/TestWS/build/agitr/CMakeFiles/pubvel_with_max.dir
 /home/max/TestWS/build/agitr/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 /home/max/TestWS/build/agitr/CMakeFiles/test.dir
+/home/max/TestWS/build/agitr/CMakeFiles/install/strip.dir
+/home/max/TestWS/build/agitr/CMakeFiles/avoid_edges.dir
 /home/max/TestWS/build/agitr/CMakeFiles/rebuild_cache.dir
-/home/max/TestWS/build/agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir
-/home/max/TestWS/build/agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir
-/home/max/TestWS/build/agitr/CMakeFiles/install.dir

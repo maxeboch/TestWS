@@ -27,6 +27,7 @@ add_executable(set_bg_color set_bg_color.cpp)
 add_executable(pubvel_with_max pubvel_with_max.cpp)
 add_executable(spawn_turtle spawn_turtle.cpp)
 add_executable(pubvel_toggle pubvel_toggle.cpp)
+add_executable(avoid_edges avoid_edges.cpp)
 
 # Specify libraries agains which to link. Again,
 # this line should be copied for each distinct executable interface
@@ -41,3 +42,4 @@ target_link_libraries(set_bg_color ${catkin_LIBRARIES})
 target_link_libraries(pubvel_with_max ${catkin_LIBRARIES})
 target_link_libraries(spawn_turtle ${catkin_LIBRARIES})
 target_link_libraries(pubvel_toggle ${catkin_LIBRARIES})
+target_link_libraries(avoid_edges ${catkin_LIBRARIES})

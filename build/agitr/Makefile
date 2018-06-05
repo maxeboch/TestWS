@@ -77,16 +77,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -110,6 +111,17 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -120,18 +132,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -556,6 +556,36 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/max/TestWS/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule:
+	cd /home/max/TestWS/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+turtlesim_generate_messages_lisp: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
+
+.PHONY : turtlesim_generate_messages_lisp
+
+# fast build rule for target.
+turtlesim_generate_messages_lisp/fast:
+	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
+.PHONY : turtlesim_generate_messages_lisp/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
 	cd /home/max/TestWS/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
@@ -736,34 +766,19 @@ geometry_msgs_generate_messages_cpp/fast:
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/max/TestWS/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+agitr/CMakeFiles/avoid_edges.dir/rule:
+	cd /home/max/TestWS/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/avoid_edges.dir/rule
+.PHONY : agitr/CMakeFiles/avoid_edges.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+avoid_edges: agitr/CMakeFiles/avoid_edges.dir/rule
 
-.PHONY : std_msgs_generate_messages_lisp
+.PHONY : avoid_edges
 
 # fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule:
-	cd /home/max/TestWS/build && $(MAKE) -f CMakeFiles/Makefile2 agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-turtlesim_generate_messages_lisp: agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/rule
-
-.PHONY : turtlesim_generate_messages_lisp
-
-# fast build rule for target.
-turtlesim_generate_messages_lisp/fast:
-	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build.make agitr/CMakeFiles/turtlesim_generate_messages_lisp.dir/build
-.PHONY : turtlesim_generate_messages_lisp/fast
+avoid_edges/fast:
+	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/avoid_edges.dir/build.make agitr/CMakeFiles/avoid_edges.dir/build
+.PHONY : avoid_edges/fast
 
 anon.o: anon.cpp.o
 
@@ -791,6 +806,33 @@ anon.s: anon.cpp.s
 anon.cpp.s:
 	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/anon.dir/build.make agitr/CMakeFiles/anon.dir/anon.cpp.s
 .PHONY : anon.cpp.s
+
+avoid_edges.o: avoid_edges.cpp.o
+
+.PHONY : avoid_edges.o
+
+# target to build an object file
+avoid_edges.cpp.o:
+	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/avoid_edges.dir/build.make agitr/CMakeFiles/avoid_edges.dir/avoid_edges.cpp.o
+.PHONY : avoid_edges.cpp.o
+
+avoid_edges.i: avoid_edges.cpp.i
+
+.PHONY : avoid_edges.i
+
+# target to preprocess a source file
+avoid_edges.cpp.i:
+	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/avoid_edges.dir/build.make agitr/CMakeFiles/avoid_edges.dir/avoid_edges.cpp.i
+.PHONY : avoid_edges.cpp.i
+
+avoid_edges.s: avoid_edges.cpp.s
+
+.PHONY : avoid_edges.s
+
+# target to generate assembly for a file
+avoid_edges.cpp.s:
+	cd /home/max/TestWS/build && $(MAKE) -f agitr/CMakeFiles/avoid_edges.dir/build.make agitr/CMakeFiles/avoid_edges.dir/avoid_edges.cpp.s
+.PHONY : avoid_edges.cpp.s
 
 count.o: count.cpp.o
 
@@ -1069,10 +1111,12 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... install"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... turtlesim_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... turtlesim_generate_messages_nodejs"
 	@echo "... count"
-	@echo "... install/strip"
 	@echo "... turtlesim_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
@@ -1084,13 +1128,15 @@ help:
 	@echo "... pubvel_with_max"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... test"
+	@echo "... install/strip"
+	@echo "... avoid_edges"
 	@echo "... rebuild_cache"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... turtlesim_generate_messages_lisp"
-	@echo "... install"
 	@echo "... anon.o"
 	@echo "... anon.i"
 	@echo "... anon.s"
+	@echo "... avoid_edges.o"
+	@echo "... avoid_edges.i"
+	@echo "... avoid_edges.s"
 	@echo "... count.o"
 	@echo "... count.i"
 	@echo "... count.s"
