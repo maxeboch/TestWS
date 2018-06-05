@@ -7,4 +7,9 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/max/TestWS/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/max/TestWS/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/max/TestWS/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/max/TestWS/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/max/TestWS/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/max/TestWS/src:$ROS_PACKAGE_PATH"
