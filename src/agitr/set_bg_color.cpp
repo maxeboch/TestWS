@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   // Set the background color for turtlesim,
   // overriding the default blue color.
   ros::param::set("background_r", 255);
-  ros::param::set("background_g", 0);
+  ros::param::set("background_g", 255);
   ros::param::set("background_b", 0);
 
   //Get turtlesim to pick up the new parameter values.
