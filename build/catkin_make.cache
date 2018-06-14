@@ -1,2 +1,0 @@
-agitr
--DCATKIN_DEVEL_PREFIX=/home/max/TestWS/devel -DCMAKE_INSTALL_PREFIX=/home/max/TestWS/install -G Unix Makefiles

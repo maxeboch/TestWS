@@ -1,8 +1,0 @@
-prefix=/home/max/TestWS/devel
-
-Name: agitr
-Description: Description of agitr
-Version: 0.0.2
-Cflags: 
-Libs: -L/home/max/TestWS/devel/lib 
-Requires: 
